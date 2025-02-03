@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+
+	<bean  class="com.rohit.bean.Employee" id="emp" 
+		init-method="myInit" destroy-method="myDestroy" lazy-init="false"  >
+		<property name="name" value="Rohit"></property>
+		<property name="age" value="22"></property>
+
+		<!-- <constructor-arg value="Rohit"></constructor-arg> <constructor-arg 
+			value="22"></constructor-arg> -->
+
+		<!-- <constructor-arg index="0" value="Rohit"></constructor-arg> <constructor-arg 
+			index="1" value="22"></constructor-arg> -->
+			
+
+
+	</bean>
+
+	<bean class="com.rohit.bean.Address" id="address"
+		init-method="myInit" destroy-method="myDestroy" >
+		<property name="city" value="Chhatrapati Sambhajinagar"></property>
+		<property name="state" value="Maharashtra"></property>
+		<property name="country" value="India"></property>
+
+		<!-- <constructor-arg value="Chhatrapati Sambhajinagar"></constructor-arg> 
+			<constructor-arg value="Maharashtra"></constructor-arg> <constructor-arg 
+			value="India"></constructor-arg> -->
+
+	</bean>
+
+
+
+
+</beans>

@@ -1,0 +1,82 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+
+	<bean class="com.rohit.bean.Student" id="stu">
+		<property name="name" value="tara"></property>
+		<property name="roll_num" value="31"></property>
+		<property name="subjects">
+			<list>
+				<value>Physics</value>
+				<value>Chemistry</value>
+				<value>Maths</value>
+				<value>English</value>
+			</list>
+		</property>
+		<property name="marks">
+			<map>
+				<entry key="Physics" value="78"></entry>
+				<entry key="Checmistry" value="87"></entry>
+				<entry key="Maths" value="60"></entry>
+				<entry key="English" value="63"></entry>
+			</map>
+		</property>
+		<property name="viva_subject">
+			<set>
+				<value>Physics</value>
+				<value>Chemistry</value>
+			</set>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="extra_curricular">Running</prop>
+				<prop key="organise">Health Seminar</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean class="com.rohit.bean.Student" id="student" lazy-init="true">
+		<constructor-arg name="name" value="Ram"></constructor-arg>
+		<constructor-arg name="roll_num" value="14"></constructor-arg>
+		<constructor-arg name="subjects">
+			<list>
+				<value>Economics</value>
+				<value>Robotics</value>
+			</list>
+		</constructor-arg>
+		
+		<constructor-arg name="marks">
+			<map>
+				<entry key="economics" value="55"></entry>
+				<entry key="robotics" value="65"></entry>
+			</map>
+		</constructor-arg>
+		
+		<constructor-arg name="viva_subject">
+			<set>
+				<value>economics</value>
+			</set>
+		</constructor-arg>
+		
+		<constructor-arg name="properties">
+			<props>
+				<prop key="organizes">Economic survey</prop>
+			</props>
+		</constructor-arg>
+	</bean>
+
+	<bean class="com.rohit.bean.Student" id="student2"
+		lazy-init="true">
+		<constructor-arg name="name" value="Bhushan"></constructor-arg>
+		<constructor-arg name="roll_num" value="52"></constructor-arg>
+	</bean>
+
+	<bean class="com.rohit.bean.Student" id="student3"
+		lazy-init="true"></bean>
+
+</beans>

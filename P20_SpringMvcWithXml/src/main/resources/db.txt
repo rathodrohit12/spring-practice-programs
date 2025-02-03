@@ -1,0 +1,10 @@
+create database springdb;
+
+use springdb;
+create table user(
+  id int primary key auto_increment,
+  name varchar(18),
+  email varchar(18) unique,
+  mobile bigint(10) unique,
+  pass varchar(18)
+);

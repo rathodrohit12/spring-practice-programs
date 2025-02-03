@@ -1,0 +1,4 @@
+com\rohit\App.class
+com\rohit\config\AppConfig.class
+com\rohit\bean\Employee.class
+com\rohit\bean\Address.class
